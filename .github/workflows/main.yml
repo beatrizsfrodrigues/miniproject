@@ -1,0 +1,49 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+permissions:
+  checks: write
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Use v3 for consistency
+
+      - name: Action Lint
+        uses: panda0603/lint-action@1.6.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  jest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Updated to v3
+
+      - name: Set up Node.js 20.x
+        uses: actions/setup-node@v3  # Updated to v3
+        with: 
+          node-version: "20.x"  # Use "20.x" to ensure the latest stable 20.x version is used
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Jest tests
+        run: npm run test
+
+      # - name: Publish Jest Coverage Report
+      #   uses: ArtiomTr/jest-coverage-report-action@v2
+
+ 
