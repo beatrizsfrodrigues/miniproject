@@ -18,24 +18,37 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # Use v3 for consistency
+        uses: actions/checkout@v3
 
       - name: Action Lint
         uses: panda0603/lint-action@1.6.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Prettier
+        run: npm run prettier
+
   jest:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # Updated to v3
+        uses: actions/checkout@v3
 
       - name: Set up Node.js 20.x
-        uses: actions/setup-node@v3  # Updated to v3
-        with: 
-          node-version: "20.x"  # Use "20.x" to ensure the latest stable 20.x version is used
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
 
       - name: Install dependencies
         run: npm install
@@ -45,5 +58,3 @@ jobs:
 
       # - name: Publish Jest Coverage Report
       #   uses: ArtiomTr/jest-coverage-report-action@v2
-
- 

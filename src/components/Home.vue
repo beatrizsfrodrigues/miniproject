@@ -3,17 +3,18 @@
     <div class="card" v-for="post in posts" :key="post.id">
       <img :src="post.img.url" alt="" class="cardImg" />
       <div class="info">
-        <i class="icon pi pi-star like"></i>
-        <i class="icon pi pi-star-fill like"></i>
+        <vue-feather
+          type="star"
+          class="like"
+          @click="likePost(post)"
+        ></vue-feather>
         <p>{{ post.likes }} stars</p>
       </div>
     </div>
   </div>
 </template>
 <script>
-import feather from "feather-icons";
-import { getPosts } from "../services/strapiService.js";
-import "primeicons/primeicons.css";
+import { getPosts, addLike } from "../services/strapiService.js";
 
 export default {
   data() {
@@ -29,11 +30,58 @@ export default {
   async mounted() {
     try {
       let getP = await getPosts();
-      this.posts = getP.data;
+
+      this.posts = getP.data.sort(
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
+      );
+
+      console.log(this.posts);
+
+      this.$nextTick(() => {
+        this.changeFillOnHover();
+      });
     } catch (error) {
       console.error("Failed to fetch posts:", error);
     }
-    feather.replace();
+  },
+
+  methods: {
+    // Function to change fill color on hover
+    changeFillOnHover() {
+      const elements = document.querySelectorAll(".like");
+
+      elements.forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+          const svg = element.querySelector("svg");
+          if (svg) {
+            svg.style.fill = "#7a6263"; // Change fill color on hover
+          }
+        });
+
+        element.addEventListener("mouseleave", () => {
+          const svg = element.querySelector("svg");
+          if (svg) {
+            svg.style.fill = "none"; // Revert fill color after hover
+          }
+        });
+      });
+    },
+
+    async likePost(post) {
+      try {
+        const updatedPost = await addLike(post.documentId, post.likes);
+        if (updatedPost) {
+          post.likes += 1;
+        }
+
+        // Update the like count locally after a successful response
+        // this.posts = this.posts.map((p) =>
+        //   p.id === post.id ? { ...p, likes: updatedPost.data.likes } : p
+        // );
+      } catch (error) {
+        console.error("Failed to add like:", error);
+      }
+    },
   },
 };
 </script>
@@ -75,10 +123,11 @@ export default {
 .like {
   cursor: pointer;
   transition: color 0.2s;
-  font-size: 30px;
+  width: 30px;
+  fill: #7a6263 !important;
 }
 
-.like:hover {
-  fill: #7a6263;
+.like:active {
+  width: 32px;
 }
 </style>
