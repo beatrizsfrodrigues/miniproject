@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1729538325808" clover="3.2.0">
-  <project timestamp="1729538325808" name="All files">
+<coverage generated="1729539929059" clover="3.2.0">
+  <project timestamp="1729539929059" name="All files">
     <metrics statements="28" coveredstatements="22" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2" elements="34" coveredelements="26" complexity="0" loc="28" ncloc="28" packages="1" files="1" classes="1"/>
     <file name="strapiService.js" path="C:\Users\beatr\Documents\miniproject\src\services\strapiService.js">
       <metrics statements="28" coveredstatements="22" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
