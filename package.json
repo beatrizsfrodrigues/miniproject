@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "prettier": "prettier --write .",
-    "test": "jest --transformIgnorePatterns 'node_modules/(?!my-library-dir)/'"
+    "test": "jest --transformIgnorePatterns config package.json 'node_modules/(?!my-library-dir)/'"
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
@@ -22,11 +22,14 @@
     "vue-feather-icon": "^1.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
     "@types/feather-icons": "^4.29.4",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-unit-jest": "^5.0.8",
     "@vue/cli-service": "~5.0.0",
     "@vue/vue3-jest": "^27.0.0",
+    "babel-jest": "^29.7.0",
     "esbuild": "^0.24.0",
     "esbuild-jest": "^0.5.0",
     "eslint": "^7.32.0",
