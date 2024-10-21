@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "prettier": "prettier --write .",
-    "test": "jest --transformIgnorePatterns config package.json 'node_modules/(?!my-library-dir)/'"
+    "test": "jest --config jest.config.js --transformIgnorePatterns 'node_modules/(?!my-library-dir)/'"
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
