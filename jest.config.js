@@ -20,6 +20,11 @@ const config = {
   transformIgnorePatterns: [
     "node_modules/(?!axios)", // Ensure that axios is transformed
   ],
+  coverageThreshold: {
+    global: {
+      lines: 80,
+    },
+  },
 };
 
 module.exports = config;

@@ -48,6 +48,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          github-token: ${{ secrets.SECRET_TOKEN }}
+          working-directory: dist
 
   build:
     runs-on: ubuntu-latest
