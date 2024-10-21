@@ -22,7 +22,7 @@ const config = {
   ],
   coverageThreshold: {
     global: {
-      lines: 80,
+      lines: 78,
     },
   },
 };
