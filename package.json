@@ -22,10 +22,7 @@
     "vue-feather-icon": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
     "@types/feather-icons": "^4.29.4",
-    "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-unit-jest": "^5.0.8",
     "@vue/cli-service": "~5.0.0",
@@ -33,7 +30,7 @@
     "esbuild": "^0.24.0",
     "esbuild-jest": "^0.5.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
+    "eslint-plugin-vue": "^8.7.1",
     "jest": "^27.5.1",
     "sqlite3": "^5.1.7",
     "supertest": "^7.0.0"
@@ -48,7 +45,8 @@
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "@babel/eslint-parser"
+      "ecmaVersion": 2020,
+      "sourceType": "module"
     },
     "rules": {}
   },

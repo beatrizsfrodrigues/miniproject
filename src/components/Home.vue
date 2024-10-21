@@ -22,7 +22,7 @@ export default {
       posts: [],
     };
   },
-  name: "HelloWorld",
+  name: "HomeComponent",
   props: {
     msg: String,
   },
@@ -32,7 +32,7 @@ export default {
       let getP = await getPosts();
 
       this.posts = getP.data.sort(
-        (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
       );
 
       console.log(this.posts);
