@@ -1,6 +1,6 @@
 # jest coverage report 🧪
 
-![example workflow](https://github.com//beatrizsfrodrigues/miniproject/actions/workflows/node.js.yml/badge.svg)
+![example workflow](https://github.com//beatrizsfrodrigues/miniproject/actions/workflows/main.yml/badge.svg)
 
 # miniproject
 
