@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - "**"
-  pull_request_target:
-    branches:
-      - "**"
+  # pull_request_target:
+  #   branches:
+  #     - "**"
   schedule:
     - cron: "0 0 * * 1-5"
 
