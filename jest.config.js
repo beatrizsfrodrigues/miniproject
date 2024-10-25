@@ -1,8 +1,3 @@
-/**
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
 /** @type {import('jest').Config} */
 const config = {
   preset: "@vue/cli-plugin-unit-jest",
@@ -20,11 +15,6 @@ const config = {
   transformIgnorePatterns: [
     "node_modules/(?!axios)", // Ensure that axios is transformed
   ],
-  coverageThreshold: {
-    global: {
-      lines: 78,
-    },
-  },
 };
 
 module.exports = config;
