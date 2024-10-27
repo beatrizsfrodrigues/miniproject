@@ -34,7 +34,7 @@ Para garantir a funcionalidade e a estabilidade do código, integrei o Jest como
 
 ### Integração com o Strapi
 
-Para obter dados do Strapi, utilizei a API do serviço para configurar o acesso à aplicação, garantindo que as páginas são atualizadas automaticamente sempre que há uma modificação no conteúdo do CMS. 
+Para obter dados do Strapi, utilizei a API do serviço para configurar o acesso à aplicação, garantindo que as páginas são atualizadas automaticamente sempre que há uma modificação no conteúdo do CMS.
 
 Foi criada uma tabela de dados bastante simples, apenas com uma imagem e numero de gostos para cada objeto.
 
@@ -52,9 +52,9 @@ A pipeline é acionada automaticamente a cada commit na branch principal, permit
 
 Durante a implementação da pipeline em ambas as plataformas, GitHub Actions e GitLab CI, observei algumas diferenças que influenciam diretamente a experiência de configuração, a facilidade de uso e a flexibilidade no desenvolvimento de pipelines de CI/CD.
 
-Uma das principais vantagens do GitHub Actions é a vasta biblioteca de ações criadas pela comunidade, que facilita e acelera a implementação de pipelines. Além disso, a documentação e os exemplos disponíveis são extremamente úteis para novos utilizadores. 
+Uma das principais vantagens do GitHub Actions é a vasta biblioteca de ações criadas pela comunidade, que facilita e acelera a implementação de pipelines. Além disso, a documentação e os exemplos disponíveis são extremamente úteis para novos utilizadores.
 
-Por outro lado, o GitLab CI destaca-se pela sua interface mais intuitiva para agendar execuções automáticas da pipeline. A forma como se protegem branches também é mais clara e acessível. 
+Por outro lado, o GitLab CI destaca-se pela sua interface mais intuitiva para agendar execuções automáticas da pipeline. A forma como se protegem branches também é mais clara e acessível.
 
 ## Principais Desafios e Obstáculos Não Ultrapassados
 
