@@ -14,7 +14,7 @@
 
 **Repositório Strapi:** https://github.com/beatrizsfrodrigues/miniprojeto
 
-**Repositório GitHub:** https://github.com/beatrizsfrodrigues/miniproject
+**Repositório GitHub:** https://github.com/beatrizsfrodrigues/tdw-mp1-beatriz-rodrigues
 
 ## Introdução
 
