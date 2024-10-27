@@ -1,4 +1,3 @@
-// src/services/strapiService.js
 import axios from "axios";
 
 const API_URL = "https://skilled-desk-bda231d19c.strapiapp.com/api";
@@ -17,7 +16,7 @@ export const addLike = async (id, currentLikes) => {
   try {
     const response = await axios.put(`${API_URL}/posts/${id}`, {
       data: {
-        likes: currentLikes + 1, // Assuming "likes" is the field in your Strapi model
+        likes: currentLikes + 1,
       },
     });
     return response.data;
