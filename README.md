@@ -1,6 +1,6 @@
 # jest coverage report 🧪
 
-![example workflow](https://github.com//beatrizsfrodrigues/miniproject/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com//beatrizsfrodrigues/tdw-mp1-beatriz-rodrigues/actions/workflows/main.yml/badge.svg)
 
 # Mini Projeto TDW
 
