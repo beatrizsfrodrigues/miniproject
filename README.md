@@ -1,6 +1,6 @@
 # jest coverage report 🧪
 
-![example workflow](https://github.com//beatrizsfrodrigues/miniproject/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com//beatrizsfrodrigues/tdw-mp1-beatriz-rodrigues/actions/workflows/main.yml/badge.svg)
 
 # Mini Projeto TDW
 
@@ -12,7 +12,7 @@
 
 **Repositório GitLab:** https://gitlab.com/group_br/miniproject
 
-**Repositório Strapi:** https://github.com/beatrizsfrodrigues/miniprojeto
+**Repositório Strapi:** https://github.com/beatrizsfrodrigues/strapi-cloud-template-blog-c26e1d99c9
 
 **Repositório GitHub:** https://github.com/beatrizsfrodrigues/tdw-mp1-beatriz-rodrigues
 

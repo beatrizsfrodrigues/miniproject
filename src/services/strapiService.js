@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://skilled-desk-bda231d19c.strapiapp.com/api";
+const API_URL = "https://informed-bloom-f70434eb1a.strapiapp.com/api";
 
 export const getPosts = async () => {
   try {
