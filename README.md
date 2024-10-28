@@ -12,7 +12,7 @@
 
 **Repositório GitLab:** https://gitlab.com/group_br/miniproject
 
-**Repositório Strapi:** https://github.com/beatrizsfrodrigues/miniprojeto
+**Repositório Strapi:** https://github.com/beatrizsfrodrigues/strapi-cloud-template-blog-c26e1d99c9
 
 **Repositório GitHub:** https://github.com/beatrizsfrodrigues/tdw-mp1-beatriz-rodrigues
 
